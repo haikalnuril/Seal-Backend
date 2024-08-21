@@ -1,4 +1,3 @@
-//import express validator
 const { body } = require('express-validator');
 
 const validateTask = [
@@ -14,12 +13,6 @@ const validateTask = [
     body('info')
         .notEmpty().withMessage('Info is required')
         .isLength({ min: 10 }).withMessage('Info must be at least 10 characters long'),
-    
-    body('userId')
-        .isInt().withMessage('User ID must be an integer'),
-    
-    body('proyekId')
-        .isInt().withMessage('Project ID must be an integer'),
 ];
 
 module.exports = { validateTask };
